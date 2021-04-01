@@ -1,0 +1,10 @@
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\bin\Debug\Image-Processing.exe.config
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\bin\Debug\Image-Processing.exe
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\bin\Debug\Image-Processing.pdb
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csprojAssemblyReference.cache
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image_Processing.Form1.resources
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image_Processing.Properties.Resources.resources
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csproj.GenerateResource.cache
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csproj.CoreCompileInputs.cache
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.exe
+C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.pdb
