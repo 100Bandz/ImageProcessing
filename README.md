@@ -1,4 +1,4 @@
-# Image Processing application for manipulating images 📸✂
+# Image Processing Application For Manipulating Images 📸✂
 
 ## A showcase of the various transformations and filters! ##
 
