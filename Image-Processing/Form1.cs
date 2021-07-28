@@ -26,28 +26,36 @@ namespace Image_Processing
             Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            //   openFileDialog1.InitialDirectory = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyPictures);
             openFileDialog1.Filter = "Images (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
             openFileDialog1.Title = "Image Browser";
 
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            try
             {
-                if ((myStream = openFileDialog1.OpenFile()) != null)
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    Image newImage = Image.FromStream(myStream);
-                    bitmapImage = new Bitmap(newImage, 320, 240);
-                    picImage.Image = bitmapImage;
-                    myStream.Close();
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        Image newImage = Image.FromStream(myStream);
+                        bitmapImage =
+                            new Bitmap(newImage, 320, 240); //Takes the input stream and makes it into a bitmap
+                        picImage.Image = bitmapImage; //outputs the bitmapImage to the pictureBox
+                        myStream.Close();
+                    }
                 }
+
+                SetArrayFromBitmap();
+            }
+            catch
+            {
+                MessageBox.Show("Invalid file type");
             }
 
-            SetArayFromBitmap();
+
         }
 
-        private void SetBitmapFromAray()
+        private void SetBitmapFromArray()    //Convert ImageArray back to BitmapImage, in order to output to Picturebox
         {
             for (int row = 0; row < 320; row++)
             for (int col = 0; col < 240; col++)
@@ -56,8 +64,11 @@ namespace Image_Processing
             }
         }
 
-        private void SetArayFromBitmap()
+        private void SetArrayFromBitmap()   //Convert BitmapImage to ImageArray, in order to manipulate image
         {
+            if (bitmapImage == null)
+                return;
+
             for (int row = 0; row < 320; row++)
             for (int col = 0; col < 240; col++)
             {
@@ -69,8 +80,6 @@ namespace Image_Processing
         {
             if (bitmapImage == null)
                 return;
-
-            /// Process the array data here!!!
 
             Byte Green;
 
@@ -94,7 +103,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -103,7 +112,6 @@ namespace Image_Processing
             if (bitmapImage == null)
                 return;
 
-            ///Process the array data
 
             Byte Red, Green, Blue;
 
@@ -128,7 +136,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -137,7 +145,6 @@ namespace Image_Processing
             if (bitmapImage == null)
                 return;
 
-            ///Process the array data
 
             int iWidth = 320;
             int iHeight = 240;
@@ -177,7 +184,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -187,7 +194,6 @@ namespace Image_Processing
                 if (bitmapImage == null)
                     return;
 
-                ///Process the array data
 
                 int iWidth = 320;
                 int iHeight = 240;
@@ -226,7 +232,7 @@ namespace Image_Processing
                     }
                 }
 
-                SetBitmapFromAray();
+                SetBitmapFromArray();
                 picImage.Image = bitmapImage;
             }
         }
@@ -237,7 +243,6 @@ namespace Image_Processing
                 if (bitmapImage == null)
                     return;
 
-                ///Process the array data
 
                 int iWidth = 320;
                 int iHeight = 240;
@@ -278,7 +283,7 @@ namespace Image_Processing
                     }
                 }
 
-                SetBitmapFromAray();
+                SetBitmapFromArray();
                 picImage.Image = bitmapImage;
             }
         }
@@ -289,7 +294,6 @@ namespace Image_Processing
                 if (bitmapImage == null)
                     return;
 
-                ///Process the array data
 
                 int iWidth = 320;
                 int iHeight = 240;
@@ -343,7 +347,7 @@ namespace Image_Processing
                     }
                 }
 
-                SetBitmapFromAray();
+                SetBitmapFromArray();
                 picImage.Image = bitmapImage;
             }
         }
@@ -358,8 +362,6 @@ namespace Image_Processing
 
                 if (bitmapImage == null)
                     return;
-
-                ///Process the array data
 
                 int iWidth = 320;
                 int iHeight = 240;
@@ -391,7 +393,7 @@ namespace Image_Processing
                     }
                 }
 
-                SetBitmapFromAray();
+                SetBitmapFromArray();
                 picImage.Image = bitmapImage;
             }
         }
@@ -430,7 +432,7 @@ namespace Image_Processing
                     }
                 }
 
-                SetBitmapFromAray();
+                SetBitmapFromArray();
                 picImage.Image = bitmapImage;
             }
         }
@@ -441,7 +443,6 @@ namespace Image_Processing
                 if (bitmapImage == null)
                     return;
 
-                ///Process the array data
 
                 int iWidth = 320;
                 int iHeight = 240;
@@ -466,7 +467,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -480,7 +481,6 @@ namespace Image_Processing
             if (bitmapImage == null)
                 return;
 
-            ///Process the array data
 
             int iWidth = 320;
             int iHeight = 240;
@@ -512,7 +512,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -520,8 +520,6 @@ namespace Image_Processing
         {
             if (bitmapImage == null)
                 return;
-
-            ///Process the array data
 
             int iWidth = 320;
             int iHeight = 240;
@@ -552,7 +550,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -565,7 +563,6 @@ namespace Image_Processing
             if (bitmapImage == null)
                 return;
 
-            ///Process the array data
 
             int iWidth = 320;
             int iHeight = 240;
@@ -646,7 +643,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -711,7 +708,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -772,7 +769,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -782,7 +779,6 @@ namespace Image_Processing
                 if (bitmapImage == null)
                     return;
 
-                /// Process the array data here!!!
 
                 Byte Red;
 
@@ -806,7 +802,7 @@ namespace Image_Processing
                     }
                 }
 
-                SetBitmapFromAray();
+                SetBitmapFromArray();
                 picImage.Image = bitmapImage;
             }
         }
@@ -815,8 +811,6 @@ namespace Image_Processing
         {
             if (bitmapImage == null)
                 return;
-
-            /// Process the array data here!!!
 
             byte Green;
 
@@ -840,7 +834,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -850,14 +844,12 @@ namespace Image_Processing
                 if (bitmapImage == null)
                     return;
 
-                /// Process the array data here!!!
-
                 Byte Blue;
 
                 int iWidth = 320;
                 int iHeight = 240;
 
-                // The sample code extracts the Blue channel of a pixel and assign the color only to Blue channel
+                //code extracts the Blue channel of a pixel and assign the color only to Blue channel
 
                 for (int i = 0; i < iWidth; i++)
                 {
@@ -874,7 +866,7 @@ namespace Image_Processing
                     }
                 }
 
-                SetBitmapFromAray();
+                SetBitmapFromArray();
                 picImage.Image = bitmapImage;
             }
         }
@@ -894,7 +886,7 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
         }
 
@@ -902,7 +894,6 @@ namespace Image_Processing
         {
             if (bitmapImage == null)
                 return;
-
             for (int i = 0; i < 320; i++)
             {
                 for (int j = 0; j < 120; j++)
@@ -913,15 +904,8 @@ namespace Image_Processing
                 }
             }
 
-            SetBitmapFromAray();
+            SetBitmapFromArray();
             picImage.Image = bitmapImage;
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-
-/*            if (bitmapImage == null)
-                return;*/
         }
     }
 }

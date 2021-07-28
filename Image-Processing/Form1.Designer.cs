@@ -50,13 +50,12 @@ namespace Image_Processing
             this.btnTransform = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.picImage = new System.Windows.Forms.PictureBox();
-            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnTile
             // 
-            this.BtnTile.Location = new System.Drawing.Point(559, 191);
+            this.BtnTile.Location = new System.Drawing.Point(565, 203);
             this.BtnTile.Name = "BtnTile";
             this.BtnTile.Size = new System.Drawing.Size(75, 23);
             this.BtnTile.TabIndex = 34;
@@ -66,7 +65,7 @@ namespace Image_Processing
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(478, 191);
+            this.btnSort.Location = new System.Drawing.Point(484, 203);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(75, 23);
             this.btnSort.TabIndex = 33;
@@ -76,7 +75,7 @@ namespace Image_Processing
             // 
             // btnFlipVertically
             // 
-            this.btnFlipVertically.Location = new System.Drawing.Point(479, 258);
+            this.btnFlipVertically.Location = new System.Drawing.Point(527, 270);
             this.btnFlipVertically.Name = "btnFlipVertically";
             this.btnFlipVertically.Size = new System.Drawing.Size(75, 35);
             this.btnFlipVertically.TabIndex = 39;
@@ -86,7 +85,7 @@ namespace Image_Processing
             // 
             // btnExtractBlue
             // 
-            this.btnExtractBlue.Location = new System.Drawing.Point(558, 229);
+            this.btnExtractBlue.Location = new System.Drawing.Point(564, 241);
             this.btnExtractBlue.Name = "btnExtractBlue";
             this.btnExtractBlue.Size = new System.Drawing.Size(75, 23);
             this.btnExtractBlue.TabIndex = 37;
@@ -96,7 +95,7 @@ namespace Image_Processing
             // 
             // btnExtractRed
             // 
-            this.btnExtractRed.Location = new System.Drawing.Point(396, 229);
+            this.btnExtractRed.Location = new System.Drawing.Point(402, 241);
             this.btnExtractRed.Name = "btnExtractRed";
             this.btnExtractRed.Size = new System.Drawing.Size(75, 23);
             this.btnExtractRed.TabIndex = 35;
@@ -106,7 +105,7 @@ namespace Image_Processing
             // 
             // btnExtractGreen
             // 
-            this.btnExtractGreen.Location = new System.Drawing.Point(478, 229);
+            this.btnExtractGreen.Location = new System.Drawing.Point(484, 241);
             this.btnExtractGreen.Name = "btnExtractGreen";
             this.btnExtractGreen.Size = new System.Drawing.Size(75, 23);
             this.btnExtractGreen.TabIndex = 36;
@@ -116,7 +115,7 @@ namespace Image_Processing
             // 
             // btnBlur
             // 
-            this.btnBlur.Location = new System.Drawing.Point(396, 191);
+            this.btnBlur.Location = new System.Drawing.Point(402, 203);
             this.btnBlur.Name = "btnBlur";
             this.btnBlur.Size = new System.Drawing.Size(75, 23);
             this.btnBlur.TabIndex = 32;
@@ -126,7 +125,7 @@ namespace Image_Processing
             // 
             // btnSwitch
             // 
-            this.btnSwitch.Location = new System.Drawing.Point(559, 113);
+            this.btnSwitch.Location = new System.Drawing.Point(565, 125);
             this.btnSwitch.Name = "btnSwitch";
             this.btnSwitch.Size = new System.Drawing.Size(75, 23);
             this.btnSwitch.TabIndex = 28;
@@ -136,7 +135,7 @@ namespace Image_Processing
             // 
             // btnScroll
             // 
-            this.btnScroll.Location = new System.Drawing.Point(559, 155);
+            this.btnScroll.Location = new System.Drawing.Point(565, 167);
             this.btnScroll.Name = "btnScroll";
             this.btnScroll.Size = new System.Drawing.Size(75, 23);
             this.btnScroll.TabIndex = 31;
@@ -146,7 +145,7 @@ namespace Image_Processing
             // 
             // btnPixellate
             // 
-            this.btnPixellate.Location = new System.Drawing.Point(478, 155);
+            this.btnPixellate.Location = new System.Drawing.Point(484, 167);
             this.btnPixellate.Name = "btnPixellate";
             this.btnPixellate.Size = new System.Drawing.Size(75, 23);
             this.btnPixellate.TabIndex = 30;
@@ -156,7 +155,7 @@ namespace Image_Processing
             // 
             // btnFlipHorizontal
             // 
-            this.btnFlipHorizontal.Location = new System.Drawing.Point(396, 258);
+            this.btnFlipHorizontal.Location = new System.Drawing.Point(444, 270);
             this.btnFlipHorizontal.Name = "btnFlipHorizontal";
             this.btnFlipHorizontal.Size = new System.Drawing.Size(75, 35);
             this.btnFlipHorizontal.TabIndex = 38;
@@ -166,7 +165,7 @@ namespace Image_Processing
             // 
             // btnRotate180
             // 
-            this.btnRotate180.Location = new System.Drawing.Point(396, 155);
+            this.btnRotate180.Location = new System.Drawing.Point(402, 167);
             this.btnRotate180.Name = "btnRotate180";
             this.btnRotate180.Size = new System.Drawing.Size(75, 23);
             this.btnRotate180.TabIndex = 29;
@@ -176,7 +175,7 @@ namespace Image_Processing
             // 
             // btnPolarize
             // 
-            this.btnPolarize.Location = new System.Drawing.Point(396, 113);
+            this.btnPolarize.Location = new System.Drawing.Point(402, 125);
             this.btnPolarize.Name = "btnPolarize";
             this.btnPolarize.Size = new System.Drawing.Size(75, 23);
             this.btnPolarize.TabIndex = 26;
@@ -186,7 +185,7 @@ namespace Image_Processing
             // 
             // btnGreyScale
             // 
-            this.btnGreyScale.Location = new System.Drawing.Point(478, 113);
+            this.btnGreyScale.Location = new System.Drawing.Point(484, 125);
             this.btnGreyScale.Name = "btnGreyScale";
             this.btnGreyScale.Size = new System.Drawing.Size(75, 23);
             this.btnGreyScale.TabIndex = 27;
@@ -196,7 +195,7 @@ namespace Image_Processing
             // 
             // btnSunset
             // 
-            this.btnSunset.Location = new System.Drawing.Point(558, 75);
+            this.btnSunset.Location = new System.Drawing.Point(564, 87);
             this.btnSunset.Name = "btnSunset";
             this.btnSunset.Size = new System.Drawing.Size(75, 23);
             this.btnSunset.TabIndex = 25;
@@ -206,7 +205,7 @@ namespace Image_Processing
             // 
             // btnLighten
             // 
-            this.btnLighten.Location = new System.Drawing.Point(396, 75);
+            this.btnLighten.Location = new System.Drawing.Point(402, 87);
             this.btnLighten.Name = "btnLighten";
             this.btnLighten.Size = new System.Drawing.Size(75, 23);
             this.btnLighten.TabIndex = 23;
@@ -216,7 +215,7 @@ namespace Image_Processing
             // 
             // btnDarken
             // 
-            this.btnDarken.Location = new System.Drawing.Point(478, 75);
+            this.btnDarken.Location = new System.Drawing.Point(484, 87);
             this.btnDarken.Name = "btnDarken";
             this.btnDarken.Size = new System.Drawing.Size(75, 23);
             this.btnDarken.TabIndex = 24;
@@ -226,7 +225,7 @@ namespace Image_Processing
             // 
             // btnNegative
             // 
-            this.btnNegative.Location = new System.Drawing.Point(558, 34);
+            this.btnNegative.Location = new System.Drawing.Point(564, 46);
             this.btnNegative.Name = "btnNegative";
             this.btnNegative.Size = new System.Drawing.Size(75, 23);
             this.btnNegative.TabIndex = 22;
@@ -236,7 +235,7 @@ namespace Image_Processing
             // 
             // btnTransform
             // 
-            this.btnTransform.Location = new System.Drawing.Point(478, 34);
+            this.btnTransform.Location = new System.Drawing.Point(484, 46);
             this.btnTransform.Name = "btnTransform";
             this.btnTransform.Size = new System.Drawing.Size(75, 23);
             this.btnTransform.TabIndex = 21;
@@ -246,7 +245,7 @@ namespace Image_Processing
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(396, 34);
+            this.btnBrowse.Location = new System.Drawing.Point(402, 46);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(75, 23);
             this.btnBrowse.TabIndex = 20;
@@ -256,28 +255,17 @@ namespace Image_Processing
             // 
             // picImage
             // 
-            this.picImage.Location = new System.Drawing.Point(12, 12);
+            this.picImage.Location = new System.Drawing.Point(27, 46);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(320, 240);
             this.picImage.TabIndex = 40;
             this.picImage.TabStop = false;
             // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(558, 258);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 35);
-            this.btnClear.TabIndex = 41;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 344);
-            this.Controls.Add(this.btnClear);
+            this.ClientSize = new System.Drawing.Size(689, 367);
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.BtnTile);
             this.Controls.Add(this.btnSort);
@@ -329,7 +317,6 @@ namespace Image_Processing
         private System.Windows.Forms.Button btnTransform;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.PictureBox picImage;
-        private System.Windows.Forms.Button btnClear;
     }
 }
 

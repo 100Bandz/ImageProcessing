@@ -8,3 +8,23 @@ C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\ob
 C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csproj.CoreCompileInputs.cache
 C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.exe
 C:\Users\Nicolas\Desktop\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.pdb
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\bin\Debug\Image-Processing.exe.config
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\bin\Debug\Image-Processing.exe
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\bin\Debug\Image-Processing.pdb
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csprojAssemblyReference.cache
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image_Processing.Form1.resources
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image_Processing.Properties.Resources.resources
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csproj.GenerateResource.cache
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csproj.CoreCompileInputs.cache
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.exe
+C:\Users\Nicolas\Desktop\C#\Updated C# Projects\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.pdb
+D:\C#\ImageProcessing\Image-Processing\bin\Debug\Image-Processing.exe.config
+D:\C#\ImageProcessing\Image-Processing\bin\Debug\Image-Processing.exe
+D:\C#\ImageProcessing\Image-Processing\bin\Debug\Image-Processing.pdb
+D:\C#\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csproj.AssemblyReference.cache
+D:\C#\ImageProcessing\Image-Processing\obj\Debug\Image_Processing.Form1.resources
+D:\C#\ImageProcessing\Image-Processing\obj\Debug\Image_Processing.Properties.Resources.resources
+D:\C#\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csproj.GenerateResource.cache
+D:\C#\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.csproj.CoreCompileInputs.cache
+D:\C#\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.exe
+D:\C#\ImageProcessing\Image-Processing\obj\Debug\Image-Processing.pdb
