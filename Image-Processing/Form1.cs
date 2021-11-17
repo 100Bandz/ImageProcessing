@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Accord.Vision.Detection;
+using Accord.Vision.Detection.Cascades;
+using Accord.Imaging.Filters;
 
 namespace Image_Processing
 {
@@ -20,6 +23,8 @@ namespace Image_Processing
 
         Bitmap bitmapImage;
         Color[,] ImageArray = new Color[320, 240];
+        int iWidth = 320;
+        int iHeight = 240;
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
@@ -906,6 +911,122 @@ namespace Image_Processing
 
             SetBitmapFromArray();
             picImage.Image = bitmapImage;
+        }
+
+        private void btnFaceDetection_Click(object sender, EventArgs e)
+        {
+            if (bitmapImage == null)
+                return;
+
+            HaarCascade cascade = new FaceHaarCascade();
+            var detector = new HaarObjectDetector(cascade, 30);
+            Rectangle[] objects = detector.ProcessFrame(bitmapImage);
+
+            RectanglesMarker marker = new RectanglesMarker(objects, Color.Fuchsia);
+
+            // Applies the marker to the picture
+            picImage.Image = marker.Apply(bitmapImage);
+
+        }
+
+        private void btnEdgeDetection_Click(object sender, EventArgs e)
+        {
+            int Red;
+            int Blue;
+            int Green;
+
+            if (bitmapImage == null)
+                return;
+
+            int iWidth = 320;
+            int iHeight = 240;
+            int Gx;
+            int Gy;
+
+            int[,] s2 = new int[,] { { -1, 0, 1 }, { -2, 0, 2 }, { -1, 0, 1 } };    //Horizontal
+            int[,] s1 = new int[,] { { -1, -2, -1 }, { 0, 0, 0 }, { 1, 2, 1 } };    //Vertical
+            Color[,] TempArray = new Color[320, 240];
+            Color[,] HorizontalImage = new Color[320, 240];
+            Color[,] VerticalImage = new Color[320, 240];
+            Color[,] GradientImage = new Color[320, 240];
+
+
+
+            //The code extracts the color channel of a pixel and averages the RGB values and changes each colour to the average value
+
+            for (int i = 0; i < iWidth; i++)
+            {
+                for (int j = 0; j < iHeight; j++)
+                {
+                    Color col = ImageArray[i, j];
+
+
+                    Red = col.R;
+                    Green = col.G;
+                    Blue = col.B;
+
+                    int average = (Red + Green + Blue) / 3;
+
+                    Red = average;
+                    Green = average;
+                    Blue = average;
+
+
+                    Color GreyScale = Color.FromArgb(col.A, (int)Red, (int)Green, (int)Blue);
+
+                    ImageArray[i, j] = GreyScale;
+
+                }
+            }
+
+            for (int i = 0; i < iWidth; i++)
+            {
+                for (int j = 0; j < iHeight; j++)
+                {
+                    TempArray[i, j] = ImageArray[i, j]; //Stores the previous pixels in temporary array
+                }
+            }
+
+            for (int i = 1; i < iWidth -1; i++)
+            {
+                for (int j = 1; j < iHeight -1; j++)
+                {
+
+                    Gx = (s2[0, 0] * TempArray[i - 1, j - 1].ToArgb()) + (s2[0, 1] * TempArray[i - 1, j].ToArgb()) + (s2[0, 2] * TempArray[i - 1, j + 1].ToArgb()) + (s2[1, 0] * TempArray[i, j - 1].ToArgb()) + (s2[1, 1] * TempArray[i, j].ToArgb()) + (s2[1, 2] * TempArray[i, j + 1].ToArgb()) + (s2[2, 0] * TempArray[i + 1, j - 1].ToArgb()) + (s2[2, 1] * TempArray[i + 1, j].ToArgb()) + (s2[2, 2] * TempArray[i + 1, j + 1].ToArgb());
+
+                    HorizontalImage[i - 1, j - 1] = Color.FromArgb(Math.Abs(Gx));
+
+                    Gy = (s1[0, 0] * TempArray[i - 1, j - 1].ToArgb()) + (s1[0, 1] * TempArray[i - 1, j].ToArgb()) + (s1[0, 2] * TempArray[i - 1, j + 1].ToArgb()) + (s1[1, 0] * TempArray[i, j - 1].ToArgb()) + (s1[1, 1] * TempArray[i, j].ToArgb()) + (s1[1, 2] * TempArray[i, j + 1].ToArgb()) + (s1[2, 0] * TempArray[i + 1, j - 1].ToArgb()) + (s1[2, 1] * TempArray[i + 1, j].ToArgb()) + (s1[2, 2] * TempArray[i + 1, j + 1].ToArgb());
+
+                    VerticalImage[i - 1, j - 1] = Color.FromArgb(Math.Abs(Gy));
+
+                    var magnitude = Math.Sqrt(Math.Pow(Gx, 2.0) + Math.Pow(Gy, 2.0));
+                    GradientImage[i - 1, j - 1] = Color.FromArgb((int)magnitude);
+                    ImageArray[i-1,j-1] = GradientImage[i - 1, j - 1];
+                }
+            }
+
+            SetBitmapFromArray();
+            picImage.Image = bitmapImage;
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (bitmapImage != null)
+                {
+                    bitmapImage.Save("D:\\myBitmap.bmp");
+                    MessageBox.Show("File Saved");
+                    
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("There was a problem saving the file." +
+                    "Check the file permissions.");
+            }
         }
     }
 }

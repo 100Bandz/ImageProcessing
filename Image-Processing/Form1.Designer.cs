@@ -50,6 +50,9 @@ namespace Image_Processing
             this.btnTransform = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.picImage = new System.Windows.Forms.PictureBox();
+            this.btnFaceDetection = new System.Windows.Forms.Button();
+            this.btnEdgeDetection = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +78,7 @@ namespace Image_Processing
             // 
             // btnFlipVertically
             // 
-            this.btnFlipVertically.Location = new System.Drawing.Point(527, 270);
+            this.btnFlipVertically.Location = new System.Drawing.Point(484, 270);
             this.btnFlipVertically.Name = "btnFlipVertically";
             this.btnFlipVertically.Size = new System.Drawing.Size(75, 35);
             this.btnFlipVertically.TabIndex = 39;
@@ -155,7 +158,7 @@ namespace Image_Processing
             // 
             // btnFlipHorizontal
             // 
-            this.btnFlipHorizontal.Location = new System.Drawing.Point(444, 270);
+            this.btnFlipHorizontal.Location = new System.Drawing.Point(402, 270);
             this.btnFlipHorizontal.Name = "btnFlipHorizontal";
             this.btnFlipHorizontal.Size = new System.Drawing.Size(75, 35);
             this.btnFlipHorizontal.TabIndex = 38;
@@ -261,11 +264,44 @@ namespace Image_Processing
             this.picImage.TabIndex = 40;
             this.picImage.TabStop = false;
             // 
+            // btnFaceDetection
+            // 
+            this.btnFaceDetection.Location = new System.Drawing.Point(565, 270);
+            this.btnFaceDetection.Name = "btnFaceDetection";
+            this.btnFaceDetection.Size = new System.Drawing.Size(75, 35);
+            this.btnFaceDetection.TabIndex = 41;
+            this.btnFaceDetection.Text = "Face Detection";
+            this.btnFaceDetection.UseVisualStyleBackColor = true;
+            this.btnFaceDetection.Click += new System.EventHandler(this.btnFaceDetection_Click);
+            // 
+            // btnEdgeDetection
+            // 
+            this.btnEdgeDetection.Location = new System.Drawing.Point(402, 311);
+            this.btnEdgeDetection.Name = "btnEdgeDetection";
+            this.btnEdgeDetection.Size = new System.Drawing.Size(75, 35);
+            this.btnEdgeDetection.TabIndex = 42;
+            this.btnEdgeDetection.Text = "Edge Detection";
+            this.btnEdgeDetection.UseVisualStyleBackColor = true;
+            this.btnEdgeDetection.Click += new System.EventHandler(this.btnEdgeDetection_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(484, 311);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 35);
+            this.btnSave.TabIndex = 43;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 367);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnEdgeDetection);
+            this.Controls.Add(this.btnFaceDetection);
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.BtnTile);
             this.Controls.Add(this.btnSort);
@@ -317,6 +353,9 @@ namespace Image_Processing
         private System.Windows.Forms.Button btnTransform;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.PictureBox picImage;
+        private System.Windows.Forms.Button btnFaceDetection;
+        private System.Windows.Forms.Button btnEdgeDetection;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 
